@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Deporte Reserva"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_green"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewSportsName"
                 android:text="Centro deportivo"
-                android:textColor="@color/dark_gray"
+                android:textColor="@color/white_green"z
                 android:textSize="16sp" />
             <TextView
                 android:id="@+id/textViewTime"
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewCenterName"
                 android:text="Horario Reserva"
-                android:textColor="@color/dark_gray"
+                android:textColor="@color/white_green"
                 android:textSize="16sp" />
             <Button
                 android:id="@+id/buttonDetalles"
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:text="Detalles"
-                android:textColor="@color/white" />
+                android:textColor="@color/white_green" />
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

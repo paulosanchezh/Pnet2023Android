@@ -2,6 +2,11 @@
     <string name="app_name">GadesSports</string>
     <string name="navegation_drawer_open">Abierto</string>
     <string name="navegation_drawer_close">Cerrado</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="futbol11">Fútbol 11</string>
+    <string name="futbol5">Fútbol 5</string>
+    <string name="baloncesto">Baloncesto</string>
+    <string name="tenis">Tenis</string>
+    <string name="padel">Pádel</string>
 </resources>

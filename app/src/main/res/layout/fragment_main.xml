@@ -5,10 +5,54 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:src="@drawable/fondo_basket"></ImageView>
+
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="400dp"
+            android:layout_height="45dp"
+            android:layout_above="@+id/eslogan"
+            android:layout_marginBottom="95dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/eslogan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/desarrolladores"
+            android:layout_marginBottom="98dp"
+            android:gravity="top|center"
+            android:text="@string/eslogan"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/desarrolladores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="349dp"
+            android:gravity="center"
+            android:text="@string/desarrolladores"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
 
 </FrameLayout>

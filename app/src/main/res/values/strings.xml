@@ -26,4 +26,8 @@
     <string name="tituloSalaB">Baloncesto</string>
     <string name="descripcionSalaB">Pista de Sala interior equipada con todo el material para practicar baloncesto 5 vs 5, 3 vs 3 o mnibasket</string>
     <string name="buttonPdf">Descargar PDF</string>
+    <string name="eslogan">El deporte, al alcance de tu mano</string>
+    <string name="desarrolladores">Paulo Sánchez Hernández\nAlexandre Julian Viry\n</string>
+    <string name="nDesarrolladores">Nombre desarrolladores:</string>
+    <string name="app_descripcion">Gades Sports es un servicio tanto para jóvenes como mayores, en el que pueden reservar sus\nespacios deportivos para practicar o jugar a sus deportes favoritos de una forma sencilla e intuitiva.\nQueremos abarcar la zona de la capital de Cádiz y alrededores</string>
 </resources>

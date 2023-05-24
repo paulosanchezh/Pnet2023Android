@@ -72,15 +72,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_item_three -> Toast.makeText(this, "Item 3", Toast.LENGTH_SHORT).show()
             R.id.nav_item_four -> {
+                replaceFragment(ReservarFragment())
                 val apiService = ApiService()
-                /*GlobalScope.launch {
-                    try {
-                        val myData = apiService.getData()
-                        Log.d("API_CALL", "Données reçues : $myData")
-                    } catch (e: Exception) {
-                        Log.e("API_CALL", "Erreur lors de l'appel API: ${e.message}")
-                    }
-                }*/
                 lifecycleScope.launch {
                     /*val data = Reservas("", "test1", "test2", 2, "", "", "")
                     apiService.postData(data)*/

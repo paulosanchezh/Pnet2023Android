@@ -28,6 +28,7 @@
     <string name="buttonPdf">Descargar PDF</string>
     <string name="EditFormButtonSave">Save</string>
     <string name="EditFormButtonCancel">Cancel</string>
+    <string name="reservarTitle">Nueva reserva</string>
     <string name="eslogan">El deporte, al alcance de tu mano</string>
     <string name="desarrolladores">Paulo Sánchez Hernández\nAlexandre Julian Viry\n</string>
     <string name="nDesarrolladores">Nombre desarrolladores:</string>

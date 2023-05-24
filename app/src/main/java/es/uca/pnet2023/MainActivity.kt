@@ -56,7 +56,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 replaceFragment(ReservasFragment())
             }
             R.id.nav_item_two -> {
-                Toast.makeText(this, "Item 3", Toast.LENGTH_SHORT).show()
+                replaceFragment(SalasFragment())
+            }
+            R.id.nav_item_three -> {
+                replaceFragment(UbicacionFragment())
             }
             R.id.nav_item_three -> Toast.makeText(this, "Item 3", Toast.LENGTH_SHORT).show()
             R.id.nav_item_four -> {

@@ -51,6 +51,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
     implementation "io.ktor:ktor-client-core:1.6.4"
     implementation "io.ktor:ktor-client-android:1.6.4"

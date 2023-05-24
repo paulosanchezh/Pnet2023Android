@@ -25,9 +25,10 @@ class ReservasAdapter (private var reservas: List<Reservas>) :
 
     override fun onBindViewHolder(holder: ReservasAdapter.ReservasViewHolder, position: Int){
         val currentReserva = reservas[position]
+        val endHour = currentReserva.duration.toInt() + currentReserva.hour.substringBefore(':').toInt()
         holder.sportsTextView.text = currentReserva.pista
         holder.centerTextView.text = currentReserva.centro
-        holder.timeTextView.text = currentReserva.hour
+        holder.timeTextView.text = currentReserva.hour + " - " + endHour.toString() + ':' + currentReserva.hour.substringAfter(':')
         holder.detalleButton.setOnClickListener{
             Toast.makeText(holder.itemView.context, "Detalle Reserva ${currentReserva.pista}", Toast.LENGTH_SHORT).show()
         }

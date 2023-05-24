@@ -19,24 +19,6 @@ class ReservasViewModel : ViewModel() {
                 // Gérer les erreurs lors de l'appel API
             }
         }
-        // Lista de mascotas
-        /*val reservas = listOf(
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-            Reservas("Futbol", "Bahia sur", "23:00"),
-        )
-        reservasLiveData.value = reservas*/
     }
 
     fun getReservas(): LiveData<List<Reservas>> {

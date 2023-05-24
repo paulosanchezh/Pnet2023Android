@@ -10,4 +10,6 @@
     <string name="tenis">Tenis</string>
     <string name="padel">Pádel</string>
     <string name="nombre_empresa">Gades Sports</string>
+    <string name="como_llegar_titulo">Cómo llegar a nuestras instalaciones</string>
+    <string name="donde_esta">Donde están nuestras instalaciones</string>
 </resources>

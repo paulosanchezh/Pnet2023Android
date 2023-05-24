@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewSportsName"
                 android:text="Centro deportivo"
-                android:textColor="@color/white_green"z
+                android:textColor="@color/white_green"
                 android:textSize="16sp" />
             <TextView
                 android:id="@+id/textViewTime"

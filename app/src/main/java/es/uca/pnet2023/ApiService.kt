@@ -8,6 +8,7 @@ import io.ktor.client.features.json.serializer.KotlinxSerializer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import com.google.gson.Gson
+import io.ktor.client.request.delete
 import io.ktor.client.request.post
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.ContentType
@@ -28,6 +29,17 @@ class ApiService {
         val gson = Gson()
         val result = gson.fromJson(json, Array<Reservas>::class.java).toList()
         return@withContext result
+    }
+
+    suspend fun deleteData(id: String) = withContext(Dispatchers.IO) {
+        val url = "http://10.0.2.2:8080/reservas/$id"
+        val response = client.delete<HttpResponse>(url)
+
+        if (response.status.isSuccess()) {
+            Log.d("API_CALL", "Suppression de données réussie")
+        } else {
+            Log.d("API_CALL", "Erreur lors de la suppression de données: ${response.status}")
+        }
     }
 
     suspend fun postData(data: Reservas) = withContext(Dispatchers.IO) {

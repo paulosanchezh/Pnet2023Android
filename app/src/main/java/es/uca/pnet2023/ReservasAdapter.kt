@@ -1,5 +1,6 @@
 package es.uca.pnet2023
 
+import android.text.TextUtils.replace
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +8,11 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class ReservasAdapter (private var reservas: List<Reservas>) :
     RecyclerView.Adapter<ReservasAdapter.ReservasViewHolder>(){
@@ -33,10 +38,12 @@ class ReservasAdapter (private var reservas: List<Reservas>) :
         return ReservasViewHolder(itemView)
     }
 
+
     override fun onBindViewHolder(holder: ReservasAdapter.ReservasViewHolder, position: Int){
         val currentReserva = reservas[position]
         val endHour = currentReserva.duration.toInt() + currentReserva.hour.substringBefore(':').toInt()
         val isExpanded = currentReserva.isExpanded
+        val apiService = ApiService()
 
         if (isExpanded) {
             holder.nameTextView.visibility = View.VISIBLE
@@ -70,6 +77,12 @@ class ReservasAdapter (private var reservas: List<Reservas>) :
         holder.messageTextView.text = "Message: " + currentReserva.message
         holder.detalleButton.setOnClickListener{
             Toast.makeText(holder.itemView.context, "Detalle Reserva ${currentReserva.pista}", Toast.LENGTH_SHORT).show()
+        }
+        holder.deleteButton.setOnClickListener() {
+            GlobalScope.launch {
+                apiService.deleteData(currentReserva._id)
+
+            }
         }
 
         holder.detalleButton.setOnClickListener {

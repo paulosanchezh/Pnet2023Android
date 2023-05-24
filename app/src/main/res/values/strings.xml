@@ -19,4 +19,11 @@
     <string name="submit">Crear Reserva</string>
     <string name="delete_button">Delete</string>
     <string name="edit_button">Edit</string>
+    <string name="tituloSala">Fútbol 11</string>
+    <string name="descripcionSala">Campo perfecto para practicar futbol 11, de césped artificial, por lo que aseguramos que durante todo el año se puede jugar en nuestros terrenos de juego, disponemos de servicio de balon.\n\nTambién nos aseguramos con que cuentan con las medidas oficiales de un campo reglamentario de fútbol 11.</string>
+    <string name="personalSala">Personal</string>
+    <string name="descripcionPersonal">Disponemos de personal cualificado en todos los ambitos deportivos que ofrecemos, para en caso de duda, enseñanza o corrección de técnica esten a vuestro servicio de forma gratuita.</string>
+    <string name="tituloSalaB">Baloncesto</string>
+    <string name="descripcionSalaB">Pista de Sala interior equipada con todo el material para practicar baloncesto 5 vs 5, 3 vs 3 o mnibasket</string>
+    <string name="buttonPdf">Descargar PDF</string>
 </resources>

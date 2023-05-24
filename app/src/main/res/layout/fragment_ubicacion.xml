@@ -10,15 +10,38 @@
             android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textQuienesSomosTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:text="@string/donde_esta"
+                    android:text="@string/quienes_somos_titulo"
                     map:layout_constraintTop_toTopOf="parent"
                     tools:layout_editor_absoluteX="0dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/more_dark_green"/>
+
+                <TextView
+                    android:id="@+id/textQuienesSomosDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center"
+                    android:text="@string/quienes_somos_descripcion"
+                    map:layout_constraintTop_toTopOf="@+id/textQuienesSomosTitulo"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <TextView
+                    android:id="@+id/textDondeInstalaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="@string/donde_esta"
                     android:textColor="@color/more_dark_green"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    map:layout_constraintTop_toBottomOf="@+id/textQuienesSomosDescripcion"
+                    tools:layout_editor_absoluteX="0dp" />
 
                 <fragment
                     android:id="@+id/map"
@@ -31,7 +54,7 @@
                     map:cameraTargetLng="-6.20758135976366"
                     map:cameraTilt="30"
                     map:cameraZoom="16"
-                    map:layout_constraintTop_toBottomOf="@+id/textView2"
+                    map:layout_constraintTop_toBottomOf="@+id/textDondeInstalaciones"
                     map:mapType="normal"
                     map:uiCompass="false"
                     map:uiRotateGestures="true"
@@ -42,15 +65,29 @@
                     tools:layout_editor_absoluteX="0dp" />
 
                 <TextView
-                    android:id="@+id/textComoLlegar"
+                    android:id="@+id/textComoLlegarTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:gravity="center"
+                    android:textStyle="bold"
                     android:text="@string/como_llegar_titulo"
+                    android:textColor="@color/more_dark_green"
                     map:layout_constraintTop_toBottomOf="@+id/map"
+                    tools:layout_editor_absoluteX="-16dp" />
+
+                <TextView
+                    android:id="@+id/textComoLlegarDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/como_llegar_descripcion"
+                    android:textColor="@color/more_dark_green"
+                    map:layout_constraintTop_toBottomOf="@+id/textComoLlegarTitulo"
                     tools:layout_editor_absoluteX="0dp"
-                    android:style="bold"
-                    android:textColor="@color/more_dark_green"/>
+                    android:autoLink="web"/>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

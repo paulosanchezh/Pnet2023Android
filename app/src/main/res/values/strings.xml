@@ -12,4 +12,7 @@
     <string name="nombre_empresa">Gades Sports</string>
     <string name="como_llegar_titulo">Cómo llegar a nuestras instalaciones</string>
     <string name="donde_esta">Donde están nuestras instalaciones</string>
+    <string name="quienes_somos_titulo">¿Quiénes somos?</string>
+    <string name="quienes_somos_descripcion">Hola buenas, somos dos estudiantes llamados Paulo Sánchez Hernández y de ingenería informática en la universidad de cadiz, estamos desarrolando una app en android para aprobar la asginatura programacion en internet y hemos decidido crear una app de reserva de espacios deportivos.</string>
+    <string name="como_llegar_descripcion">Nos situamos dentro del área comercial Bahía sur, que está situado a unos 300m de la estación de tren Bahía sur y junto a las salinas.\nLa dirección exacta es:\nCentro Comercial Bahía Sur, 11100 San Fernando, Cádiz\n\nSe puede llegar andando perfectamente a través de la pasarela que conecta por el tren, tanto como en coche o en bus.\n-Línea 1 bus San Fernando:\nhttps://www.sanfernando.es/ayto/visor.asp?hidOptNav=1227\n\n-Tren Cercanías Cádiz:\nhttps://www.renfe.com/es/es/cercanias/cercanias-cadiz/horarios</string>
 </resources>

@@ -17,4 +17,6 @@
     <string name="como_llegar_descripcion">Nos situamos dentro del área comercial Bahía sur, que está situado a unos 300m de la estación de tren Bahía sur y junto a las salinas.\nLa dirección exacta es:\nCentro Comercial Bahía Sur, 11100 San Fernando, Cádiz\n\nSe puede llegar andando perfectamente a través de la pasarela que conecta
         por el tren, tanto como en coche o en bus.\n-Línea 1 bus San Fernando:\nhttps://www.sanfernando.es/ayto/visor.asp?hidOptNav=1227\n\n-Tren Cercanías Cádiz:\nhttps://www.renfe.com/es/es/cercanias/cercanias-cadiz/horarios</string>
     <string name="submit">Crear Reserva</string>
+    <string name="delete_button">Delete</string>
+    <string name="edit_button">Edit</string>
 </resources>

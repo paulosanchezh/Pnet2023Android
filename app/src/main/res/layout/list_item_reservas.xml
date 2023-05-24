@@ -10,10 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:padding="16dp">
+
             <TextView
                 android:id="@+id/textViewSportsName"
                 android:layout_width="wrap_content"
@@ -22,6 +24,7 @@
                 android:textColor="@color/dark_green"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/textViewCenterName"
                 android:layout_width="wrap_content"
@@ -30,6 +33,7 @@
                 android:text="Centro deportivo"
                 android:textColor="@color/white_green"
                 android:textSize="16sp" />
+
             <TextView
                 android:id="@+id/textViewTime"
                 android:layout_width="wrap_content"
@@ -38,6 +42,61 @@
                 android:text="Horario Reserva"
                 android:textColor="@color/white_green"
                 android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/reservationName"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCenterName"
+                android:layout_marginTop="21dp"
+                android:textColor="@color/white_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/reservationMail"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCenterName"
+                android:layout_marginTop="44dp"
+                android:textColor="@color/white_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/reservationPhone"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCenterName"
+                android:layout_marginTop="66dp"
+                android:textColor="@color/white_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/reservationPeople"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCenterName"
+                android:layout_marginTop="88dp"
+                android:textColor="@color/white_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/reservationDni"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCenterName"
+                android:layout_marginTop="111dp"
+                android:textColor="@color/white_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/reservationMessage"
+                android:layout_width="262dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/textViewCenterName"
+                android:layout_marginTop="134dp"
+                android:textColor="@color/white_green"
+                android:textSize="14sp" />
+
             <Button
                 android:id="@+id/buttonDetalles"
                 android:layout_width="wrap_content"
@@ -45,6 +104,27 @@
                 android:layout_alignParentEnd="true"
                 android:text="Detalles"
                 android:textColor="@color/white_green" />
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="220dp"
+                android:backgroundTint="@color/light_blue"
+                android:text="@string/edit_button" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="220dp"
+                android:layout_marginEnd="68dp"
+                android:backgroundTint="@color/red"
+                android:text="@string/delete_button" />
         </RelativeLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

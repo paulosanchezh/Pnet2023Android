@@ -11,7 +11,6 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.Navigation
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.launch

@@ -1,3 +1,6 @@
 package es.uca.pnet2023
 
-data class Reservas(val deporte: String, val centro: String, val horario: String)
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Reservas(val _id: String, val centro: String, val pista: String, val personas: Int, val date: String, val duration: String, val hour: String)

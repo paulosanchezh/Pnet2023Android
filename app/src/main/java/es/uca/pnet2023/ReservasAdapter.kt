@@ -25,11 +25,11 @@ class ReservasAdapter (private var reservas: List<Reservas>) :
 
     override fun onBindViewHolder(holder: ReservasAdapter.ReservasViewHolder, position: Int){
         val currentReserva = reservas[position]
-        holder.sportsTextView.text = currentReserva.deporte
+        holder.sportsTextView.text = currentReserva.pista
         holder.centerTextView.text = currentReserva.centro
-        holder.timeTextView.text = currentReserva.horario
+        holder.timeTextView.text = currentReserva.hour
         holder.detalleButton.setOnClickListener{
-            Toast.makeText(holder.itemView.context, "Detalle Reserva ${currentReserva.deporte}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(holder.itemView.context, "Detalle Reserva ${currentReserva.pista}", Toast.LENGTH_SHORT).show()
         }
     }
     override fun getItemCount() = reservas.size

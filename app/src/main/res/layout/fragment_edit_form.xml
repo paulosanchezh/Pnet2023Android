@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/EditFormButtonCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="92dp"
         android:text="@string/EditFormButtonCancel"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,15 +18,15 @@
     <Button
         android:id="@+id/EditFormButtonSave"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginEnd="92dp"
         android:text="@string/EditFormButtonSave"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="520dp" />
 
     <LinearLayout
-        android:layout_width="405dp"
-        android:layout_height="157dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp">
@@ -46,8 +46,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="401dp"
-        android:layout_height="321dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"

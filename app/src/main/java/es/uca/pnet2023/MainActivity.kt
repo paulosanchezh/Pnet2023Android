@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     }
                 }*/
                 lifecycleScope.launch {
-                    val data = MyData("", "test1", "test2", 2, "", "", "")
+                    val data = Reservas("", "test1", "test2", 2, "", "", "")
                     apiService.postData(data)
                 }
             }

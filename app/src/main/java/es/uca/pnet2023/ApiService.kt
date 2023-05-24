@@ -8,7 +8,6 @@ import io.ktor.client.features.json.serializer.KotlinxSerializer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import com.google.gson.Gson
-import com.google.gson.annotations.SerializedName
 import io.ktor.client.request.post
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.ContentType
@@ -22,16 +21,16 @@ class ApiService {
             serializer = KotlinxSerializer()
         }
     }
-    suspend fun getData(): List<MyData> = withContext(Dispatchers.IO) {
+    suspend fun getData(): List<Reservas> = withContext(Dispatchers.IO) {
         val url = "http://10.0.2.2:8080/reservas"
         Log.d("API_CALL", "Appel API réussi")
         val json = client.get<String>(url)
         val gson = Gson()
-        val result = gson.fromJson(json, Array<MyData>::class.java).toList()
+        val result = gson.fromJson(json, Array<Reservas>::class.java).toList()
         return@withContext result
     }
 
-    suspend fun postData(data: MyData) = withContext(Dispatchers.IO) {
+    suspend fun postData(data: Reservas) = withContext(Dispatchers.IO) {
         val url = "http://10.0.2.2:8080/reservas"
         val json = Gson().toJson(data)
 
@@ -46,5 +45,3 @@ class ApiService {
         }
     }
 }
-@Serializable
-data class MyData(val _id: String, val centro: String, val pista: String, val personas: Int, val date: String, val duration: String, val hour: String)

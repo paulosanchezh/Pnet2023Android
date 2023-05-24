@@ -1,5 +1,6 @@
 package es.uca.pnet2023
 
+import android.content.Intent
 import android.text.TextUtils.replace
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
@@ -37,7 +39,6 @@ class ReservasAdapter (private var reservas: List<Reservas>) :
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item_reservas, parent, false)
         return ReservasViewHolder(itemView)
     }
-
 
     override fun onBindViewHolder(holder: ReservasAdapter.ReservasViewHolder, position: Int){
         val currentReserva = reservas[position]

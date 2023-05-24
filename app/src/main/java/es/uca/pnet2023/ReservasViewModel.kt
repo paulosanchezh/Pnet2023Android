@@ -16,7 +16,6 @@ class ReservasViewModel : ViewModel() {
                 val reservas = apiService.getData()
                 reservasLiveData.value = reservas
             } catch (e: Exception) {
-                // Gérer les erreurs lors de l'appel API
             }
         }
     }

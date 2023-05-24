@@ -26,4 +26,6 @@
     <string name="tituloSalaB">Baloncesto</string>
     <string name="descripcionSalaB">Pista de Sala interior equipada con todo el material para practicar baloncesto 5 vs 5, 3 vs 3 o mnibasket</string>
     <string name="buttonPdf">Descargar PDF</string>
+    <string name="EditFormButtonSave">Save</string>
+    <string name="EditFormButtonCancel">Cancel</string>
 </resources>

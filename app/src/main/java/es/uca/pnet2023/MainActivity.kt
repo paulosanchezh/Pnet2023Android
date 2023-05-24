@@ -4,13 +4,17 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.navigation.NavigationView
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawerLayout: DrawerLayout
@@ -55,6 +59,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this, "Item 3", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_item_three -> Toast.makeText(this, "Item 3", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_four -> {
+                val apiService = ApiService()
+                /*GlobalScope.launch {
+                    try {
+                        val myData = apiService.getData()
+                        Log.d("API_CALL", "Données reçues : $myData")
+                    } catch (e: Exception) {
+                        Log.e("API_CALL", "Erreur lors de l'appel API: ${e.message}")
+                    }
+                }*/
+                lifecycleScope.launch {
+                    val data = MyData("", "test1", "test2", 2, "", "", "")
+                    apiService.postData(data)
+                }
+            }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

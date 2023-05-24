@@ -17,6 +17,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    configurations.all {
+        resolutionStrategy.force('com.google.code.findbugs:jsr305:3.0.2')
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -47,6 +51,13 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+
+    implementation "io.ktor:ktor-client-core:1.6.4"
+    implementation "io.ktor:ktor-client-android:1.6.4"
+    implementation "io.ktor:ktor-client-json:1.6.4"
+    implementation "io.ktor:ktor-client-serialization:1.6.4"
+
+    implementation 'com.google.code.gson:gson:2.8.8'
 
 
     testImplementation 'junit:junit:4.13.2'

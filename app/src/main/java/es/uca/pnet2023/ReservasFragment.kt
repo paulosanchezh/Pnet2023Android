@@ -7,10 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import es.uca.pnet2023.databinding.FragmentReservasBinding
+import kotlinx.coroutines.NonDisposableHandle.parent
 
 class ReservasFragment : Fragment() {
 
@@ -20,7 +24,7 @@ class ReservasFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ReservasAdapter
     private lateinit var viewModel: ReservasViewModel
-    private lateinit var root2 : View
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,9 +39,6 @@ class ReservasFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        root2 = inflater.inflate(R.layout.list_item_reservas, container, false)
-        setupNavigation(root2)
-
         return root
     }
 
@@ -50,13 +51,7 @@ class ReservasFragment : Fragment() {
             adapter.notifyDataSetChanged()
         }
     }
-    private fun setupNavigation(root: View) {
-        val toSalasButton = root.findViewById<Button>(R.id.editButton)
-        toSalasButton.setOnClickListener{
-            view?.findNavController()?.navigate(R.id.action_reservasFragment_to_detallesReservaFragment)
-        }
 
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

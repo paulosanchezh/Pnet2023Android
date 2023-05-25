@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
+    app:navGraph="@navigation/nav_graph"
     app:startDestination="@id/mainFragment">
 
     <fragment
@@ -25,7 +26,7 @@
         android:id="@+id/reservasFragment"
         android:name="es.uca.pnet2023.ReservasFragment"
         android:label="fragment_reservas"
-        tools:layout="@layout/fragment_reservas" >
+        tools:layout="@layout/list_item_reservas" >
         <action
             android:id="@+id/action_reservasFragment_to_detallesReservaFragment"
             app:destination="@id/detallesReservaFragment" />

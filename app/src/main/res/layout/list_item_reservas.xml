@@ -13,7 +13,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="16dp">
 
             <TextView
@@ -97,6 +97,46 @@
                 android:textColor="@color/white_green"
                 android:textSize="14sp" />
 
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:layout_marginTop="300dp"
+                android:inputType="text"
+                android:visibility="gone"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editTextMail"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="345dp"
+                android:ems="10"
+                android:visibility="gone"
+                android:inputType="text"
+                android:text="Mail" />
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="text"
+                android:layout_marginTop="390dp"
+                android:visibility="gone"
+                android:text="Phone" />
+
+            <EditText
+                android:id="@+id/editTextDNI"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="text"
+                android:layout_marginTop="435dp"
+                android:visibility="gone"
+                android:text="DNI" />
+
             <Button
                 android:id="@+id/buttonDetalles"
                 android:layout_width="wrap_content"
@@ -124,6 +164,17 @@
                 android:layout_marginEnd="68dp"
                 android:backgroundTint="@color/red"
                 android:text="@string/delete_button" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="485dp"
+                android:backgroundTint="@color/light_blue"
+                android:visibility="gone"
+                android:text="Save" />
+
+
         </RelativeLayout>
 
     </LinearLayout>

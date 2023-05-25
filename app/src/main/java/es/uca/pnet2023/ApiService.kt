@@ -15,7 +15,12 @@ import io.ktor.client.statement.HttpResponse
 import io.ktor.http.ContentType
 import io.ktor.http.content.TextContent
 import io.ktor.http.isSuccess
-import kotlinx.serialization.Serializable
+import okhttp3.MediaType
+import okhttp3.OkHttpClient
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.Request
+import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 
 class ApiService {
     private val client = HttpClient(Android) {
@@ -43,19 +48,22 @@ class ApiService {
         }
     }
 
-    suspend fun putData(data: Reservas) = withContext(Dispatchers.IO) {
-        val url = "http://10.0.2.2:8080/reservas"
+    suspend fun putData(_id: String, data: Reservas) = withContext(Dispatchers.IO) {
+        val url = "http://10.0.2.2:8080/reservas/$_id"
+        val client = OkHttpClient()
+
+// Création du corps de la requête
         val json = Gson().toJson(data)
+        val requestBody = RequestBody.create("application/json".toMediaTypeOrNull(), json)
 
-        val response = client.put<HttpResponse>(url) {
-            body = TextContent(json, ContentType.Application.Json)
-        }
+// Création de la requête
+        val request = Request.Builder()
+            .url(url)
+            .put(requestBody)
+            .build()
 
-        if (response.status.isSuccess()) {
-            Log.d("API_CALL", "Edition success")
-        } else {
-            Log.d("API_CALL", "Error while editing: ${response.status}")
-        }
+// Envoi de la requête
+        val response = client.newCall(request).execute()
     }
 
     suspend fun postData(data: Reservas) = withContext(Dispatchers.IO) {

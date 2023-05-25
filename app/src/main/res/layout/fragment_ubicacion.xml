@@ -13,23 +13,25 @@
                     android:id="@+id/textQuienesSomosTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:gravity="center"
                     android:text="@string/quienes_somos_titulo"
-                    map:layout_constraintTop_toTopOf="parent"
-                    tools:layout_editor_absoluteX="0dp"
+                    android:textColor="@color/more_dark_green"
+                    android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/more_dark_green"/>
+                    map:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="10dp" />
 
                 <TextView
                     android:id="@+id/textQuienesSomosDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
+                    android:layout_margin="10sp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/white_greent"
                     android:gravity="center"
                     android:text="@string/quienes_somos_descripcion"
-                    map:layout_constraintTop_toTopOf="@+id/textQuienesSomosTitulo"
-                    tools:layout_editor_absoluteX="0dp" />
+                    map:layout_constraintTop_toBottomOf="@+id/textQuienesSomosTitulo"
+                    tools:layout_editor_absoluteX="10dp" />
 
                 <TextView
                     android:id="@+id/textDondeInstalaciones"
@@ -41,7 +43,8 @@
                     android:textColor="@color/more_dark_green"
                     android:textStyle="bold"
                     map:layout_constraintTop_toBottomOf="@+id/textQuienesSomosDescripcion"
-                    tools:layout_editor_absoluteX="0dp" />
+                    tools:layout_editor_absoluteX="0dp"
+                    android:textSize="20sp"/>
 
                 <fragment
                     android:id="@+id/map"
@@ -74,7 +77,8 @@
                     android:text="@string/como_llegar_titulo"
                     android:textColor="@color/more_dark_green"
                     map:layout_constraintTop_toBottomOf="@+id/map"
-                    tools:layout_editor_absoluteX="-16dp" />
+                    tools:layout_editor_absoluteX="-16dp"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:id="@+id/textComoLlegarDescripcion"
@@ -86,7 +90,9 @@
                     android:textColor="@color/more_dark_green"
                     map:layout_constraintTop_toBottomOf="@+id/textComoLlegarTitulo"
                     tools:layout_editor_absoluteX="0dp"
-                    android:autoLink="web"/>
+                    android:autoLink="web"
+                    android:background="@color/white_greent"
+                    android:layout_margin="10sp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

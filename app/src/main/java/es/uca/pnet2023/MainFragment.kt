@@ -29,14 +29,6 @@ class MainFragment : Fragment() {
             View? {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_main, container, false)
-        setupNavigation(root)
         return root
         }
     }
-
-   private fun setupNavigation(root: View){
-       val toSalasButton = root.findViewById<Button>(R.id.btnToSalas)
-       toSalasButton.setOnClickListener { view: View ->
-           view.findNavController().navigate(R.id.action_mainFragment_to_salasFragment)
-       }
-}

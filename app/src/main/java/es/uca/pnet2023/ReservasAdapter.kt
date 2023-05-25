@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -19,6 +17,8 @@ import org.w3c.dom.Text
 
 class ReservasAdapter (private var reservas: List<Reservas>) :
     RecyclerView.Adapter<ReservasAdapter.ReservasViewHolder>(){
+    lateinit var navController: NavController
+    lateinit var btnNext: Button
 
     inner class ReservasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val sportsTextView: TextView = itemView.findViewById(R.id.textViewSportsName)
@@ -127,6 +127,7 @@ class ReservasAdapter (private var reservas: List<Reservas>) :
             currentReserva.isExpanded = !currentReserva.isExpanded
             notifyDataSetChanged()
         }
+
     }
     override fun getItemCount() = reservas.size
 

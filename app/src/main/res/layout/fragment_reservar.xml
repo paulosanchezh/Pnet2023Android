@@ -33,10 +33,14 @@
                 android:layout_height="wrap_content"
                 android:text="Centro" />
 
-            <Spinner
-                android:id="@+id/spinnerCentro"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp" />
+
+            <EditText
+                android:id="@+id/editTextCentro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Bahia Sur" />
 
             <TextView
                 android:id="@+id/textViewReservarPista"
@@ -44,10 +48,14 @@
                 android:layout_height="wrap_content"
                 android:text="Pista" />
 
-            <Spinner
-                android:id="@+id/spinnerPista"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp" />
+
+            <EditText
+                android:id="@+id/editTextPista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Futbol1" />
 
             <TextView
                 android:id="@+id/textViewDate"
@@ -55,10 +63,13 @@
                 android:layout_height="wrap_content"
                 android:text="Date" />
 
-            <CalendarView
-                android:id="@+id/calendarView"
+            <EditText
+                android:id="@+id/editTextDate"
                 android:layout_width="match_parent"
-                android:layout_height="297dp" />
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="00-00-2023"/>
 
             <TextView
                 android:id="@+id/textViewReservarHour"
@@ -71,7 +82,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="time" />
+                android:inputType="time"
+                android:text="00:00"/>
 
             <TextView
                 android:id="@+id/textViewReservarDuration"
@@ -84,7 +96,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="numberSigned" />
+                android:inputType="numberSigned"
+                android:text="0"/>
 
             <TextView
                 android:id="@+id/textViewReservarPeople"
@@ -93,11 +106,12 @@
                 android:text="People" />
 
             <EditText
-                android:id="@+id/editTextNumberSigned2"
+                android:id="@+id/editTextPeople"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="numberSigned" />
+                android:inputType="numberSigned"
+                android:text="0"/>
 
             <TextView
                 android:id="@+id/textViewReservarName"
@@ -105,17 +119,43 @@
                 android:layout_height="wrap_content"
                 android:text="Name" />
 
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Name" />
+
             <TextView
                 android:id="@+id/textViewReservarMail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:text="Mail" />
+
+            <EditText
+                android:id="@+id/editTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:text="mail@adress.com"/>
 
             <TextView
                 android:id="@+id/textViewReservarDNI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="DNI" />
+                android:text="DNI"
+                />
+
+            <EditText
+                android:id="@+id/editTextDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="000000000" />
 
             <TextView
                 android:id="@+id/textViewReservarPhone"
@@ -123,11 +163,39 @@
                 android:layout_height="wrap_content"
                 android:text="Phone" />
 
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:text="000000000"/>
+
             <TextView
                 android:id="@+id/textViewReservarMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Message" />
+
+            <EditText
+                android:id="@+id/editTextMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Name" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
 
         </LinearLayout>
     </ScrollView>

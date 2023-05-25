@@ -67,6 +67,7 @@ class ApiService {
     }
 
     suspend fun postData(data: Reservas) = withContext(Dispatchers.IO) {
+        println("coucou")
         val url = "http://10.0.2.2:8080/reservas"
         val json = Gson().toJson(data)
 
